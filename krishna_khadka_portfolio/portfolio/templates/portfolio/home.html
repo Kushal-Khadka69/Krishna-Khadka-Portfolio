@@ -247,62 +247,78 @@
     </section>
 
     <!-- contact section -->
-    <form method="post" action="{% url 'contact' %}">
-      {% csrf_token %}
+    <!-- contact section -->
+    <section id="contacts" class="m-b-1">
+      <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+      <div class="Contact-container flex s-around items-center">
+        <div class="from" id="contactform">
+          {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
 
-      <div class="name from-div">
-        <input
-          type="text"
-          name="name"
-          id="name"
-          class="popinss"
-          placeholder="Your Name"
-          pattern="[A-Za-z\s]{2,30}"
-          title="Only letters and spaces allowed, 2-30 characters"
-          required
-        />
+          <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+
+            <div class="name from-div">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="popinss"
+                placeholder="Your Name"
+                pattern="[A-Za-z\s]{2,30}"
+                title="Only letters and spaces allowed, 2-30 characters"
+                required
+              />
+            </div>
+
+            <div class="email from-div">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="popinss"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div class="phone2numeric from-div">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                class="popinss"
+                placeholder="Your Phone Number"
+                pattern="\+?[0-9]{7,15}"
+                title="Only digits allowed, 7-15 numbers, optional + prefix"
+                required
+              />
+            </div>
+
+            <div class="textarea from-div">
+              <textarea
+                name="content"
+                id="textarea"
+                cols="30"
+                rows="10"
+                class="popinss"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn popinss" id="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-
-      <div class="email from-div">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="popinss"
-          placeholder="Your Email"
-          required
-        />
-      </div>
-
-      <div class="phone2numeric from-div">
-        <input
-          type="text"
-          name="phone"
-          id="phone"
-          class="popinss"
-          placeholder="Your Phone Number"
-          pattern="\+?[0-9]{7,15}"
-          title="Only digits allowed, 7-15 numbers, optional + prefix"
-          required
-        />
-      </div>
-
-      <div class="textarea from-div">
-        <textarea
-          name="content"
-          id="textarea"
-          cols="30"
-          rows="10"
-          class="popinss"
-          placeholder="Your Message"
-          required
-        ></textarea>
-      </div>
-
-      <button type="submit" class="btn popinss" id="submit">
-        Send Message
-      </button>
-    </form>
+    </section>
 
     <!-- footer section -->
     <footer id="footer">
