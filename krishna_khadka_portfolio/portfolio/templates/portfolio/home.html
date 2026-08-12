@@ -107,10 +107,129 @@
     </div>
 
 </div>
-                    
-            </section>
+     </section>
 
-            
-            
-  </body>
+    <!-- projects section -->
+<section id="projects">
+    <h1 class="t-center my-2 t-white f-2">Projects</h1>
+    <div class="projects-container flex s-center">
+        <p class="t-white">Video Projects</p>
+
+        <video class="project-preview" controls>
+            <source src="{% static 'videos/introvideo.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="button flex s-around">
+            <a href="https://www.instagram.com/kushalfinds/" target="_blank">
+                <button class="btn popinss">View Projects</button>
+            </a>
+        </div>
+    </div>
+
+        <div class="projects-container flex s-center">
+            <p class="t-center my-2 t-white f-2">Graphics Projects</p>
+            <img src="{% static 'images/thumbnail.png' %}" alt="graphics image" class="project-preview">      
+        <div class="button flex s-around">
+            <a href="" target="_blank">
+                <button class="btn mx-1 m-top">View Projects</button>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- testimonials section -->
+<section id="testimonials">
+    <h1 class="t-center my-2 t-white f-2">Testimonials</h1>
+    <div class="testimonials-container flex s-around">
+
+        <div class="testimonial-card">
+            <img src="{% static 'images/pahi.png' %}" alt="Pahi Investment" class="testimonial-img">
+            <p class="t-white">"We've really enjoyed working with Krishna. He's creative, professional, and understands our requirements well. His video editing and graphic design work has been consistently good, and we're happy with the results. We'd definitely recommend his work."</p>
+            <h3 class="t-white">Pahi Investment</h3>
+            <span class="t-white">Broker Company</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="{% static 'images/midnight.png' %}" alt="Midnight Tales" class="testimonial-img">
+            <p class="t-white">"Krishna has been a great help with Midnight Tales. From our logo and thumbnails to the video editing, he's done a really good job bringing our ideas to life. He's easy to work with, creative, and always focused on making the content look better. Really happy with his work."</p>
+            <h3 class="t-white">Midnight Tales</h3>
+            <span class="t-white">Content Creator</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="{% static 'images/hue.jpg' %}" alt="Hue Katha Academy" class="testimonial-img">
+            <p class="t-white">"Krishna was one of our students in Video Editing, Photo Editing, and Cinematography. During his time with us, we saw his creativity and dedication grow significantly. After completing his courses, he also joined us as an intern and showed great commitment and willingness to learn. We're happy to see his progress and wish him all the best in his creative career."</p>
+            <h3 class="t-white">Hue Katha Academy</h3>
+            <span class="t-white">Training Academy</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="{% static 'images/keysun.jpg' %}" alt="Keysun Roka" class="testimonial-img">
+            <p class="t-white">"I worked with Krishna for short-form video editing, and I really liked the way he handled the content. He understood what I was looking for, added his own creative touch, and delivered engaging edits. He was easy to work with and I'd definitely recommend him for video editing."</p>
+            <h3 class="t-white">Keysun Roka</h3>
+            <span class="t-white">Content Creator</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="{% static 'images/kushalfinds.jpg' %}" alt="Kushalfinds" class="testimonial-img">
+            <p class="t-white">"Krishna has been editing short videos for Kushal Finds, mainly about useful and interesting websites. He understands the content well and makes the videos simple, clean, and engaging. We've really enjoyed working with him and are happy with his work."</p>
+            <h3 class="t-white">Kushalfinds</h3>
+            <span class="t-white">Content Creator</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- contact section -->
+<section id="contacts" class="m-b-1">
+    <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+    <div class="Contact-container flex s-around items-center">
+
+        <div class="from" id="contactform">
+            <form method="post">
+
+                <div class="name from-div">
+                    <input type="text" name="name" id="name" class="popinss" placeholder="Your Name" required>
+                </div>
+
+                <div class="email from-div">
+                    <input type="email" name="email" id="email" class="popinss" placeholder="Your Email" required>
+                </div>
+
+                <div class="phone2numeric from-div">
+                    <input type="text" name="phone" id="phone" class="popinss" placeholder="Your Phone Number" required>
+                </div>
+
+                <div class="textarea from-div">
+                    <textarea name="content" id="textarea" cols="30" rows="10" class="popinss" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn popinss" id="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- footer section -->
+<footer id="footer">
+    <ul class="flex s-center w-80 m-auto my-2 res">
+        <li><a href="#home" class="popinss">Home</a></li>
+        <li><a href="#about" class="popinss">About Me</a></li>
+        <li><a href="#skills" class="popinss">Skills</a></li>
+        <li><a href="#projects" class="popinss">Projects</a></li>
+        <li><a href="#testimonials" class="popinss">Testimonials</a></li>
+        <li><a href="#portfolio" class="portfolio">Home</a></li>
+    </ul>
+    <ul class="flex s-center w-80 font-awesome m-auto my-2 res">
+        <li><a href="https://www.instagram.com/krishna_khadka_/" target="_blank" class="popinss">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/krishna-khadka-1b0b4b1b6/" target="_blank" class="popinss">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@krishnakhadka" target="_blank" class="popinss">YouTube</a></li>
+        <li><a href="https://www.facebook.com/krishna.khadka.395" target="_blank" class="popinss">Facebook</a></li>
+
+    </ul>
+   <p class="t-center t-white m-b-1 popinss">© 2024 Krishna Khadka. All rights reserved. <span class="cpy-white popinss"></span></p>
+</body>
 </html>
