@@ -28,26 +28,28 @@
     </nav>
 
     <!-- home section -->
-    <section id="home" class="flex s-around sw-80 m-auto">
-      <div class="home-left flext items-center">
+    <section id="home">
+      <div class="home-left">
         <div class="home-content">
           <h6 class="popinss">Hi, I'm</h6>
           <h1 class="t-white">Krishna Khadka</h1>
           <h4 class="popinss">Video and Photo Editor</h4>
-          <a href="{% static 'pdf/git.pdf' %}" target="_blank">
-            <button class="btn popinss">Download Resume</button>
-          </a>
-          <a
-            class="btn live popinss"
-            id="hireme"
-            href="#contacts"
-            target="_self"
-            >Lets Connect</a
-          >
+          <div class="btn-group">
+            <a href="{% static 'pdf/git.pdf' %}" target="_blank">
+              <button class="btn popinss">Download Resume</button>
+            </a>
+            <a
+              class="btn live popinss"
+              id="hireme"
+              href="#contacts"
+              target="_self"
+              >Lets Connect</a
+            >
+          </div>
         </div>
       </div>
-      <div class="home-right flex s-center items-center">
-        <div class="circle flex s-center items-center" id="mainImage">
+      <div class="home-right">
+        <div class="circle" id="mainImage">
           <img src="{% static 'images/profile.png' %}" alt="picture" />
         </div>
       </div>
@@ -62,7 +64,9 @@
         </div>
 
         <div class="about-right">
-          <h1 class="t-white m-b-1 popinss">Krishna Khadka</h1>
+          <h1 class="t-white m-b-1 popinss">
+            Passionate About Visual Storytelling
+          </h1>
           <p class="t-white m-b-1 popinss">
             I am a passionate video and photo editor with a keen eye for detail
             and a love for storytelling through visual media. With years of
@@ -78,46 +82,195 @@
     <!-- skills section -->
     <section id="skills">
       <h1 class="t-center my-2 t-white f-2">Skills</h1>
+
+      <svg width="0" height="0" style="position: absolute">
+        <defs>
+          <linearGradient
+            id="skillGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
+            <stop offset="0%" stop-color="#2563eb" />
+            <stop offset="100%" stop-color="#06b6d4" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <div class="services-centainer flex s-around h-50">
         <div class="skills-left flex s-center items-center">
           <img src="{% static 'images/skills.png' %}" alt="skills image" />
         </div>
 
         <div class="skills-right flex items-center">
-          <div class="skills-container">
-            <div class="canva bar p-relative">
-              <span class="bar-content left t-white">Canva</span>
-              <span class="bar-content right-skills t-white">90%</span>
+          <div class="skills-grid">
+            <div class="skill-card" style="--delay: 0.1s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 32.67"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/Canva.png' %}"
+                    alt="Canva logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">90%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">Canva</p>
             </div>
 
-            <div class="premiere bar p-relative">
-              <span class="bar-content left t-white">Premiere Pro</span>
-              <span class="bar-content right-skills t-white">80%</span>
+            <div class="skill-card" style="--delay: 0.2s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 65.35"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/premiere.png' %}"
+                    alt="Premiere Pro logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">80%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">Premiere Pro</p>
             </div>
 
-            <div class="photoshop bar p-relative">
-              <span class="bar-content left t-white">Photoshop</span>
-              <span class="bar-content right-skills t-white">85%</span>
+            <div class="skill-card" style="--delay: 0.3s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 49.01"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/photoshop.jpg' %}"
+                    alt="Photoshop logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">85%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">Photoshop</p>
             </div>
 
-            <div class="figma bar p-relative">
-              <span class="bar-content left t-white">Figma</span>
-              <span class="bar-content right-skills t-white">90%</span>
+            <div class="skill-card" style="--delay: 0.4s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 32.67"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/figma.png' %}"
+                    alt="Figma logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">90%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">Figma</p>
             </div>
 
-            <div class="davinci bar p-relative">
-              <span class="bar-content left t-white">DaVinci Resolve</span>
-              <span class="bar-content right-skills t-white">75%</span>
+            <div class="skill-card" style="--delay: 0.5s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 81.68"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/davinci.png' %}"
+                    alt="DaVinci Resolve logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">75%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">DaVinci Resolve</p>
             </div>
 
-            <div class="capcut bar p-relative">
-              <span class="bar-content left t-white">CapCut</span>
-              <span class="bar-content right-skills t-white">90%</span>
+            <div class="skill-card" style="--delay: 0.6s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 32.67"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/capcut.png' %}"
+                    alt="CapCut logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">90%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">CapCut</p>
             </div>
 
-            <div class="aftereffects bar p-relative">
-              <span class="bar-content left t-white">After Effects</span>
-              <span class="bar-content right-skills t-white">70%</span>
+            <div class="skill-card" style="--delay: 0.7s">
+              <div class="skill-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                  <circle
+                    class="ring-fill"
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    style="--offset: 98.02"
+                  ></circle>
+                </svg>
+                <div class="skill-ring-content">
+                  <img
+                    src="{% static 'images/after effects.png' %}"
+                    alt="After Effects logo"
+                    class="skill-logo"
+                  />
+                  <span class="skill-pct">70%</span>
+                </div>
+              </div>
+              <p class="skill-label t-white">After Effects</p>
             </div>
           </div>
         </div>
@@ -129,32 +282,135 @@
       <h1 class="t-center my-2 t-white f-2">Projects</h1>
 
       <div class="projects-container flex s-center">
-        <p class="t-white">Video Projects</p>
-        <video class="project-preview" controls>
-          <source src="{% static 'videos/introvideo.mp4' %}" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="button flex s-around">
-          <a href="https://www.instagram.com/kushalfinds/" target="_blank">
-            <button class="btn popinss">View Projects</button>
-          </a>
+        <p class="project-section-title">Video Projects</p>
+
+        <div class="media-grid one-up">
+          <div class="media-card">
+            <div class="project-badge">01</div>
+            <video
+              class="project-preview project-media-trigger"
+              controls
+              preload="metadata"
+              playsinline
+              data-type="video"
+              data-video="{% static 'videos/introvideo.mp4' %}"
+            >
+              <source
+                src="{% static 'videos/introvideo.mp4' %}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
 
       <div class="projects-container flex s-center">
-        <p class="t-center my-2 t-white f-2">Graphics Projects</p>
-        <img
-          src="{% static 'images/thumbnail.png' %}"
-          alt="graphics image"
-          class="project-preview"
-        />
-        <div class="button flex s-around">
-          <a href="" target="_blank">
-            <button class="btn mx-1 m-top">View Projects</button>
-          </a>
+        <p class="project-section-title">Graphics Projects</p>
+
+        <div class="media-grid two-up">
+          <div class="media-card">
+            <div class="project-badge">01</div>
+            <img
+              src="{% static 'images/thumbnail.png' %}"
+              alt="thumbnail preview"
+              class="project-preview project-image-trigger"
+              data-image="{% static 'images/thumbnail.png' %}"
+              data-alt="thumbnail preview"
+            />
+          </div>
+
+          <div class="media-card">
+            <div class="project-badge">02</div>
+            <img
+              src="{% static 'images/ad.png' %}"
+              alt="advertisement design"
+              class="project-preview project-image-trigger"
+              data-image="{% static 'images/ad.png' %}"
+              data-alt="advertisement design"
+            />
+          </div>
         </div>
       </div>
     </section>
+
+    <div id="imageModal" class="image-modal" aria-hidden="true">
+      <div class="image-modal-backdrop" data-close="true"></div>
+      <div class="image-modal-content">
+        <button
+          type="button"
+          class="image-modal-close"
+          aria-label="Close image"
+        >
+          ×
+        </button>
+        <img id="modalImage" src="" alt="" />
+        <video id="modalVideo" controls playsinline></video>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalVideo = document.getElementById("modalVideo");
+        const triggerImages = document.querySelectorAll(
+          ".project-image-trigger",
+        );
+        const triggerVideos = document.querySelectorAll(
+          ".project-media-trigger",
+        );
+        const closeButton = document.querySelector(".image-modal-close");
+        const backdrop = document.querySelector(".image-modal-backdrop");
+
+        function closeModal() {
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+          modalVideo.pause();
+          modalVideo.removeAttribute("src");
+          modalVideo.load();
+        }
+
+        triggerImages.forEach((img) => {
+          img.addEventListener("click", function () {
+            modalImage.src = this.dataset.image;
+            modalImage.alt = this.dataset.alt || "Project image";
+            modalImage.style.display = "block";
+            modalVideo.style.display = "none";
+            modalVideo.pause();
+            modalVideo.removeAttribute("src");
+            modalVideo.load();
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+          });
+        });
+
+        triggerVideos.forEach((video) => {
+          video.addEventListener("click", function (event) {
+            const videoSource = this.dataset.video;
+            if (!videoSource) return;
+
+            modalImage.style.display = "none";
+            modalVideo.style.display = "block";
+            modalVideo.src = videoSource;
+            modalVideo.load();
+            modalVideo.play().catch(() => {});
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+            event.stopPropagation();
+          });
+        });
+
+        closeButton.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("open")) {
+            closeModal();
+          }
+        });
+      });
+    </script>
 
     <!-- testimonials section -->
     <section id="testimonials">
@@ -247,7 +503,6 @@
     </section>
 
     <!-- contact section -->
-    <!-- contact section -->
     <section id="contacts" class="m-b-1">
       <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
       <div class="Contact-container flex s-around items-center">
@@ -322,46 +577,111 @@
 
     <!-- footer section -->
     <footer id="footer">
-      <ul class="flex s-center w-80 m-auto my-2 res">
-        <li><a href="#home" class="popinss">Home</a></li>
-        <li><a href="#about" class="popinss">About Me</a></li>
-        <li><a href="#skills" class="popinss">Skills</a></li>
-        <li><a href="#projects" class="popinss">Projects</a></li>
-        <li><a href="#testimonials" class="popinss">Testimonials</a></li>
-        <li><a href="#contacts" class="popinss">Contact</a></li>
-      </ul>
       <ul class="flex s-center w-80 font-awesome m-auto my-2 res">
         <li>
           <a
-            href="https://www.instagram.com/krishna_khadka_/"
+            href="https://www.instagram.com/kushal_khadka143?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
-            class="popinss"
-            >Instagram</a
+            class="popinss social-link social-instagram"
           >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Instagram">
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" />
+              </svg>
+            </span>
+            <span>Instagram</span>
+          </a>
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/krishna-khadka-1b0b4b1b6/"
+            href="https://www.facebook.com/profile.php?id=100041668807483"
             target="_blank"
-            class="popinss"
-            >LinkedIn</a
+            class="popinss social-link social-facebook"
           >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Facebook">
+                <path
+                  d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.1c0-.9.3-1.6 1.7-1.6H17V2.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V9.9H8v3.1h2.3v8h3.2z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span>Facebook</span>
+          </a>
         </li>
         <li>
           <a
-            href="https://www.youtube.com/@krishnakhadka"
+            href="https://wa.me/9844949747"
             target="_blank"
-            class="popinss"
-            >YouTube</a
+            class="popinss social-link social-whatsapp"
           >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="WhatsApp">
+                <path
+                  d="M20.5 12.2A8.3 8.3 0 0 1 7.4 17L5 19l2-5.5a8.2 8.2 0 1 1 13.5 0z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.8 14.1c-.2.5-.9.8-1.4.9-.4.2-1 .2-2.7-.6-2.2-1-3.7-3.7-3.9-3.9-.2-.2-.5-.6-.5-1.4 0-.7.3-1 .7-1.3.2-.2.4-.3.6-.3H8c.2 0 .4.1.5.4.2.5.7 1.7.8 1.9.1.1.1.2.1.4 0 .2-.1.4-.2.5l-.4.4c-.1.1-.1.2-.1.3s.1.3.2.4c.4.5 1.1 1.2 1.8 1.9.8.7 1.6 1.2 2.1 1.4.2.1.4.1.6.1.2 0 .3-.1.4-.2l.5-.6c.2-.2.4-.2.7-.2.2 0 .4 0 .6.1.1.1.9.6 1 .8.2.3.2.5.1.7-.2.5-.9 1.1-1.5 1.4z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span>WhatsApp</span>
+          </a>
         </li>
         <li>
           <a
-            href="https://www.facebook.com/krishna.khadka.395"
+            href="mailto:kushalkhdka9844@gmail.com"
             target="_blank"
-            class="popinss"
-            >Facebook</a
+            class="popinss social-link social-email"
           >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Email">
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M4 7l8 6 8-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span>Email</span>
+          </a>
         </li>
       </ul>
       <p class="t-center t-white m-b-1 popinss">

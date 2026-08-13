@@ -39,5 +39,4 @@ def contact(request):
         ins = models.Contact(name=name, email=email, message=message, number=number)
         ins.save()
         messages.success(request, "Your message has been sent successfully. Thank you for contacting me.")
-
     return render(request, 'portfolio/home.html')
