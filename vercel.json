@@ -1,9 +1,4 @@
 {
-  "buildCommand": "pip install -r requirements.txt",
-  "devCommand": "python manage.py runserver",
-  "env": {
-    "PYTHON_VERSION": "3.11"
-  },
   "functions": {
     "api/index.py": {
       "maxDuration": 30
@@ -12,7 +7,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api"
+      "destination": "/api/index"
     }
   ]
 }
